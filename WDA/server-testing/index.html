@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<h4>Register Form</h4>
+    <form action="server.php" method="post" enctype="multipart/form-data">
+        <input type="text" value="" name="your_name" placeholder="Your Name">
+        <br>
+        <input type="email" value="" name="your_email" placeholder="Your Email">
+        <br>
+        <input type="file" name="your_photo" >
+        <br>
+
+        <label for="choose_gender">Gender</label>
+       <div id="choose_gender">
+        <input type="radio"  name="gender" value="male" id="male">
+        <label for="male">Male</label>
+        <input type="radio"  name="gender" value="Female" id="Female">
+        <label for="Female">Female</label>
+<br>
+<label for="choose_skill">
+    Choose Skill 
+</label>
+<br>
+    <div id="choose_skill">
+        <input type="checkbox" name="skill" value="html" id="html">
+    <label for="html">Html</label>
+    <input type="checkbox" name="skill[]" value="cSS" id="cSS">
+<!-- name မာ array ကွင်းလေး [] ထည့်ပေးမှ array နဲ့ပို့မယ် အာ့လိုပို့မှ ထည့်သမျှ ပေါ်မယ် -->
+
+    <label for="cSS">CSS</label>
+    <input type="checkbox" name="skill[]" value="js" id="js">
+    <label for="js">js</label>
+    <input type="checkbox" name="skill[]" value="php" id="php">
+    <label for="php">php</label>
+    <input type="checkbox" name="skill[]" value="electronic" id="electronic">
+    <label for="electronic">electronic</label>
+    </div>
+
+
+       </div>
+
+
+       <select name="nationality" id="">
+        <option value="nond" disabled  selected>Choose your country </option>
+        <option value="mm">Myanmar</option>
+        <option value="th">Thailan</option>
+        <option value="eng">England</option>
+       
+       </select>
+
+
+<br>
+<!-- multi file  -->
+<label for="attachement-file"> attachement file </label>
+<input type="file" multiple name="attachement[]" id="attachement-file"  accept="imgage/jpeg,image/png">
+        <button type="submit">Button</button>
+    </form>
+
+    <!-- google search  -->
+
+    <!-- <form action="https://google.com/search" method="get">
+        <input type="text" name="q" placeholder="please search someting">
+        <button type="submit">search</button>
+    </form> -->
+</body>
+</html>
